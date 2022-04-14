@@ -4,19 +4,17 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-/* body{
-
-} */
 /* Header */
 header{
   background-color: black;
   color: white;
   text-align: center;
-  padding: 5%;
+  padding: 5% 5% 5%;
 }
 header h1{
-  font: normal bold 100px 'Passion One', cursive;
+  font: normal bold 80px 'Passion One', cursive;
 }
 header h2{
   font: normal lighter 20px 'Passion One', cursive;
@@ -26,29 +24,70 @@ header a{
   color: white;
   font-weight: bold;
 }
+header a:hover{
+  text-decoration: underline;
+}
 /* Main */
 main{
   max-width: 1000px;
   max-height: 100%;
   margin: auto;
-  border: 2px solid black;
   font: normal normal 20px 'Sriracha', cursive;
+  border: 2px solid black;
+  border-top: transparent;
+  border-radius:0px 7px 7px;
+  box-shadow: 1px 1px 2px black;
 }
+/* Configurações dos containers */
 .container{
   max-width: 1000px;
   max-height: 700px;
-  border: 2px solid black;
-  padding: 10% 0% 10% 5%;
+  padding: 10% 0% 10% 4%;
+  background-color: #f3f3df;
 }
 section#container_2{
-  background: black url(imagens/background001.jpg) no-repeat /cover scroll;
-  background-color: black;
-  background-image: url(imagens/background001.jpg);
-  background-repeat: no-repeat;
+  background: black url(imagens/background001.jpg) no-repeat fixed center center;
   background-size: cover;
-  background-attachment: fixed;
+  color: white;
+  padding: 10% 0% 10% 3%;
 }
-section#container_2{
-  
+#container_2 p{
+width: 250px;
+background-color: rgba(255, 255, 255, 0.116);
+padding: 1%;
 }
+section#container_4{
+  background: black url(imagens/background002.jpg) no-repeat fixed;
+  background-size: cover;
+  padding: 10% 0% 10% 3%;
+}
+#container_4 p{
+  width: 252px;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 1%;
+}
+/* Back to top */
+a#back-top{
+  display: block;
+  margin: auto;
+  min-width: 20px;
+  max-width: 200px;
+  height: 6%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  transition: 0.7s;
+  padding: 0.5%;
+  margin-top: 5px;
+}
+a#back-top::after{
+  color: black;
+  transition: margin-top 250ms;
+}
+a#back-top:hover{
+  background-color: #b3b3a4;
+}
+
 
