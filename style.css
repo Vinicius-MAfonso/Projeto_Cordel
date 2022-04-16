@@ -1,73 +1,91 @@
 @charset "UTF-8 ";
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
-*{
+
+:root {
+  --font-title: 'Passion One', cursive;
+  --font_p: 'Sriracha', cursive;
+  --font_default: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 /* Header */
-header{
+header {
   background-color: black;
   color: white;
   text-align: center;
   padding: 5% 5% 5%;
 }
-header h1{
-  font: normal bold 80px 'Passion One', cursive;
+
+header h1 {
+  font: normal small-caps bold 80px var(--font-title);
 }
-header h2{
-  font: normal lighter 20px 'Passion One', cursive;
+
+header h2 {
+  font: normal lighter 15px var(--font_default);
 }
-header a{
+
+a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font: normal bold 15px var(--font_default);
 }
-header a:hover{
+
+a:hover {
   text-decoration: underline;
 }
+
 /* Main */
-main{
+main {
   max-width: 1000px;
   max-height: 100%;
   margin: auto;
-  font: normal normal 20px 'Sriracha', cursive;
   border: 2px solid black;
   border-top: transparent;
-  border-radius:0px 7px 7px;
+  border-bottom: transparent;
   box-shadow: 1px 1px 2px black;
 }
+
 /* Configurações dos containers */
-.container{
-  max-width: 1000px;
-  max-height: 700px;
-  padding: 10% 0% 10% 4%;
+section {
+  font: normal normal 20px var(--font_p);
   background-color: #f3f3df;
+  line-height: 2em;
+  padding: 2%;
 }
-section#container_2{
-  background: black url(imagens/background001.jpg) no-repeat fixed center center;
+.septilha{
+  padding-bottom: 3%;
+}
+.container-imagem {
   background-size: cover;
   color: white;
   padding: 10% 0% 10% 3%;
 }
-#container_2 p{
-width: 250px;
-background-color: rgba(255, 255, 255, 0.116);
-padding: 1%;
-}
-section#container_4{
-  background: black url(imagens/background002.jpg) no-repeat fixed;
-  background-size: cover;
-  padding: 10% 0% 10% 3%;
-}
-#container_4 p{
-  width: 252px;
-  background-color: rgba(255, 255, 255, 0.521);
+
+.container-imagem p {
+  width: 257px;
+  background-color: #fafaf1b7;
   padding: 1%;
+  color: black;
 }
+
+section#imagem1 {
+  background: black url(imagens/background001.jpg) no-repeat fixed center center;
+}
+
+section#imagem2 {
+  background: black url(imagens/background002.jpg) no-repeat fixed;
+}
+
 /* Back to top */
-a#back-top{
+a#back-top {
+  font: normal normal 20px var(--font_default);
   display: block;
   margin: auto;
   min-width: 20px;
@@ -79,15 +97,25 @@ a#back-top{
   border-radius: 5px;
   border: 2px solid black;
   transition: 0.7s;
-  padding: 0.5%;
-  margin-top: 5px;
+  padding: 1%;
 }
-a#back-top::after{
+
+a#back-top::after {
   color: black;
   transition: margin-top 250ms;
 }
-a#back-top:hover{
+
+a#back-top:hover {
   background-color: #b3b3a4;
 }
 
+footer {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
 
+footer p {
+  color: white;
+}
